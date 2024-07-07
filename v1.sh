@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Variable Declaration
+
 VARIABLE1=captain
 VARIABLE2=team
 

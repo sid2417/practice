@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# we are Declaring the variables from user end
-
+# we are Declaring the variables from user end but hiding the values
 echo " please enter your captain name "
-read VARIABLE1
+read -s VARIABLE1
 
 
 echo " please enter your team name "
-read VARIABLE2
+read -s VARIABLE2
 
 
 
