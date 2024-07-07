@@ -1,7 +1,7 @@
 #!/bin/bash
 
-$VARIABLE1=captain
-$VARIABLE2=team
+VARIABLE1=captain
+VARIABLE2=team
 
 echo "$VARIABLE1 : Hi team, we are entered into the finals, congrats all of you"
 echo "$VARIABLE2 : Thanks captain, we all are proud of you as a captain"
