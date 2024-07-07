@@ -1,6 +1,15 @@
 #!/bin/bash
-VARIABLE1=captain
-VARIABLE2=team
+
+# we are passing variable in the form of argument manner
+
+echo " please enter your captain name "
+read $VARIABLE1
+
+
+echo " please enter your team name "
+read $VARIABLE2
+
+
 
 ehco "$VARIABLE1 : Hi team, we are entered into the finals, congrats all of you"
 echo "$VARIABLE2 : Thanks captain, we all are proud of you as a captain"
