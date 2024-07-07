@@ -2,8 +2,14 @@
 
 # we are passing variable in the form of argument manner
 
-VARIABLE1
-VARIABLE2
+echo " please enter your captain name "
+read VARIABLE1
+
+
+echo " please enter your team name "
+read VARIABLE2
+
+
 
 echo "$VARIABLE1 : Hi team, we are entered into the finals, congrats all of you"
 echo "$VARIABLE2 : Thanks captain, we all are proud of you as a captain"
