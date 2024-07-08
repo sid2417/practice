@@ -11,3 +11,9 @@ else
 fi
 
 dnf install mysqld -y
+if [ $? -ne 0 ]
+then
+    echo "Installation going BAD"
+else
+    echo "mysql installation going Good"
+fi
