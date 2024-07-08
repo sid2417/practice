@@ -6,7 +6,7 @@ R='\e[31m'
 G='\e[32m'
 N='\e[0m'
 
-FILENAME=$(echo $0 | awk -F "." {print $1F})
+FILENAME=$(echo $0 | awk -F "." '{print $1F}')
 TIMESTAMP=$(date +%T-%H-%M-%S)
 LOGFILE=/tmp/$FILENAME-$TIMESTAMP
 

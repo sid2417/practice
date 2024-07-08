@@ -14,7 +14,7 @@ else
 fi
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-FILENAME=$(echo $0 | awk -F "." {print $1F})
+FILENAME=$(echo $0 | awk -F "." '{print $1F}')
 LOGFILE=/tmp/$FILENAME-$TIMESTAMP
 
 VALIDATE( ){
