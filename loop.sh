@@ -1,9 +1,14 @@
 #?/bin/bash
 
-for i in {1..20}
-do 
-    echo "$i"
-done
+VALIDATE( ){
+    if [ $1 -ne 0 ]
+    then
+        echo "$2 Failed"
+    else
+        echo "$2 Installed Successfully"
+    fi
+}
+
 
 for i in {$@}
 do 
@@ -13,7 +18,8 @@ do
     then
         echo "This is already Installed"
     else
-        echo "we need to Install"
+        dnf install $i -y
+        VALIDATE $? "Current Package $i is :"
     fi
 
 done
