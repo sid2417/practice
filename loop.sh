@@ -7,5 +7,7 @@ done
 
 for i in {$@}
 do 
-    echo "$i"
+    echo "Installing Package Name : $i"
+    dnf lint installed $i
+
 done
