@@ -6,9 +6,10 @@ R='\e[31m'
 G='\e[32m'
 Y='\e[33m'
 N='\e[0m'
-LOGFILE="/tmp+$FILENAME+$TIMESTAMP"
-FILENAME= echo file name is $0 | cut -d "." -f1
-TIMESTAMP= date +%T-%H-%M-%S
+
+FILENAME=$(echo file name is $0 | cut -d "." -f1)
+TIMESTAMP=$(date +%T-%H-%M-%S)
+LOGFILE=/tmp/$FILENAME-$TIMESTAMP.log
 USER=$(id -u)
 
 if [ $USER -ne 0 ]
@@ -20,17 +21,17 @@ else
 fi
 
 
-dnf install mysql
-VALIDATE $1 $2
+dnf install mysql &>>$LOGFILE
+VALIDATE $? "Installing MySql is : "
 
 
 VALIDATE(){
-if [ $? -ne 0 ]
+if [ $1 -ne 0 ]
 then
-    echo -e "$R mysql installation was Failure $N" 
+    echo -e "$2  Failure $N" 
     exit 2
 else
-    echo -e "$G mysql installation was Success $N" 
+    echo -e "$2  Success $N" 
 
 fi
 }
