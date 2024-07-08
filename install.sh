@@ -21,6 +21,11 @@ fi
 
 
 dnf install mysql
+validation $1 $2
+
+
+validate ()
+{
 if [ $? -ne 0 ]
 then
     echo -e "$R mysql installation was Failure $N" 
@@ -29,6 +34,9 @@ else
     echo -e "$G mysql installation was Success $N" 
 
 fi
+}
+
+
 
 
 
