@@ -24,8 +24,7 @@ dnf install mysql
 validate $1 $2
 
 
-validate ()
-{
+validate(){
 if [ $? -ne 0 ]
 then
     echo -e "$R mysql installation was Failure $N" 
