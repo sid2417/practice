@@ -21,7 +21,7 @@ fi
 
 
 dnf install mysql
-validation $1 $2
+validate $1 $2
 
 
 validate ()
