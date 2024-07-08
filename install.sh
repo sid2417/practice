@@ -1,14 +1,13 @@
 # installing softwares
 
 echo "Program is starting"
-echo "$TIMESTAMP"
 
 R='\e[31m'
 G='\e[32m'
 Y='\e[33m'
 N='\e[0m'
 LOGFILE="/tmp+$FILENAME+$TIMESTAMP"
-FILENAME= echo $0 | cut -d "." -f1
+FILENAME= echo file name is $0 | cut -d "." -f1
 TIMESTAMP= date +%T-%H-%M-%S
 USER=$(id -u)
 
