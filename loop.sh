@@ -8,7 +8,7 @@ done
 for i in {$@}
 do 
     echo "Installing Package Name : $i"
-    dnf lint installed $i
+    dnf list installed $i
     if [ $i -eq 0 ]
     then
         echo "This is already Installed"
