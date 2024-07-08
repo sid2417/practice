@@ -13,7 +13,7 @@ VALIDATE( ){
 for i in {$@}
 do 
     echo "Installing Package Name : $i"
-    dnf list installed $i
+    dnf list install $i
     if [ $i -eq 0 ]
     then
         echo "This is already Installed"
