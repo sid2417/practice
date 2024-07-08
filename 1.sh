@@ -10,7 +10,7 @@ else
     echo "You Have SUDO ACCESS"
 fi
 
-dnf install mysqld -y
+dnf install mysql -y
 if [ $? -ne 0 ]
 then
     echo "Installation going BAD"
