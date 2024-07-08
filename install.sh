@@ -5,7 +5,7 @@ G='\e[32m'
 Y='\e[33m'
 N='\e[0m'
 FILENAME= echo $0 | cut -d "." -f1
-TIMESTAMP=date +%T-%H-%M-%S
+TIMESTAMP="date +%T-%H-%M-%S"
 LOGFILE=/tmp+$FILENAME+$TIMESTAMP
 USER=$(id -u)
 
