@@ -27,7 +27,7 @@ then
     echo -e "$R mysql installation was Failure $N" 
     exit 2
 else
-    echo -e "$G mysql installation was Success $N" &>>$LOGFILE
+    echo -e "$G mysql installation was Success $N" 
 
 fi
 
