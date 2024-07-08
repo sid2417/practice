@@ -20,11 +20,6 @@ else
     echo -e "$G You are a SUPER USER $N"
 fi
 
-
-dnf install mysql &>>$LOGFILE
-VALIDATE $? "Installing MySql is : "
-
-
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
@@ -35,6 +30,12 @@ else
 
 fi
 }
+
+dnf install mysql &>>$LOGFILE
+VALIDATE $? "Installing MySql is : "
+
+
+
 
 
 
