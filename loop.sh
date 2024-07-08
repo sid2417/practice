@@ -27,7 +27,7 @@ VALIDATE( ){
 }
 
 
-for i in $@
+for i in {$@}
 do 
     echo "Package Name : $i"
     dnf list installed $i &>>$LOGFILE
