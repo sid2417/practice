@@ -13,6 +13,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then 
     echo -e "$Y Please Run this Command with SUDO $N"
+    exit 4
 else
     echo -e "$G You Have already SUDO ACCESS $N"
 fi
@@ -21,6 +22,7 @@ VALIDATE(){
      if [ $1 -ne 0 ]
     then 
         echo -e "$Y $2 FAILURE $N"
+        exit 2
     else
         echo -e "$G $2 SUCCESS $N"
     fi
